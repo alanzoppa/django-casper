@@ -64,7 +64,7 @@ class CasperTestCase(LiveServerTestCase):
         if settings.DEBUG:
             cmd.append('--verbose')
 
-        cmd.extend([('--%s=%s' % i) for i in kwargs.iteritems()])
+        cmd.extend([('--%s=%s' % i) for i in kwargs.items()])
         cmd.append(test_filename)
 
         node_env = os.environ.copy()
